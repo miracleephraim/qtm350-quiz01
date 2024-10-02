@@ -1,0 +1,85 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Country Analysis\"\n",
+        "---\n",
+        "\n",
+        "\n",
+        "This page explores how life expectancy has changed over time.\n"
+      ],
+      "id": "2446b865"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: true\n",
+        "#| eval: true\n",
+        "\n",
+        "# Install packages\n",
+        "!pip install pandas gapminder\n",
+        "\n",
+        "# Import necessary libraries\n",
+        "import pandas as pd\n",
+        "from gapminder import gapminder\n",
+        "\n",
+        "# Rename 'lifeExp' to 'life_expectancy' and 'gdpPercap' to 'gdp_per_capita'\n",
+        "gapminder = gapminder.rename(columns={'lifeExp': 'life_expectancy',\n",
+        "                                      'pop': 'population_millions', \n",
+        "                                      'gdpPercap': 'gdp_per_capita'})\n",
+        "\n",
+        "# Convert population to millions\n",
+        "gapminder['population_millions'] = gapminder['population_millions'] / 1_000_000\n",
+        "\n",
+        "# Create a new pandas DataFrame from the modified gapminder data\n",
+        "gapminder_df = pd.DataFrame(gapminder)\n",
+        "\n",
+        "# Save the DataFrame as a CSV file\n",
+        "gapminder_df.to_csv('gapminder.csv', index=False)\n"
+      ],
+      "id": "1a610e40",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: true\n",
+        "#| eval: true\n",
+        "\n",
+        "import numpy as np\n",
+        "import seaborn as sns\n",
+        "import matplotlib.pyplot as plt\n",
+        "plt.plot(gapminder_df[\"year\"], gapminder_df[\"gdp_per_capita\"], label=\"GDP per Capita\")\n",
+        "plt.plot(gapminder_df[\"year\"], gapminder_df[\"population\"], label=\"Population\")\n",
+        "plt.plot(gapminder_df[\"year\"], gapminder_df[\"life_expectancy\"], label=\"Life Expectancy\")\n",
+        "\n",
+        "plt.legend()\n",
+        "\n",
+        "plt.xlabel(\"Year\")\n",
+        "plt.ylabel(\"Values\")\n",
+        "plt.title(\"Comparing Population, GDP, and Life Expectancy Over time (1952-2007)\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "id": "12c8ce22",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\mirac\\anaconda3\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

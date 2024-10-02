@@ -1,0 +1,122 @@
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350 (main)
+$ git init
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350 (main)
+$ git clone https://github.com/miracleephraim/qtm350-quiz01.git     
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350 (main)      
+$ cd qtm350-quiz01
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$ touch commands.txt
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$ git branch
+* main
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$ git checkout -b feature-update
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ mkdir reports
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ touch summary.md && echo "This document provides a summary of the project updates." >> summary.md
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ git add . && git commit -m "Add reports directory"
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ cd reports
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01/reports (feature-update)
+$ touch file{1..3}.txt
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01/reports (feature-update)
+$ mv ../data/raw-data.csv ../data/input-data.csv
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01/reports (feature-update)
+$ cd ../scripts
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01/scripts (feature-update)
+$ mkdir backup &&  cp ./*.py ./backup/
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01/scripts (feature-update)
+$ ls ./backup
+01-setup.py  02-data-cleaning.py  03-data-modelling.py
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01/scripts (feature-update)
+$ rm ../docs/documentation.md
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01/scripts (feature-update)
+$ cd ..
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ git add . && git commit -m "Update project files"
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ git pull
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ echo "temp/
+dataset0?.csv" >> .gitignore
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ cat .gitignore
+temp/
+dataset0?.csv
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ git add . && git commit -m "Add .gitignore file"
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (feature-update)
+$ git switch main
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$ git merge feature-update
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$ git pull
+Auto-merging .gitignore
+CONFLICT (add/add): Merge conflict in .gitignore
+Automatic merge failed; fix conflicts and then commit the result.   
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main|MERGING)
+$ git push
+To https://github.com/miracleephraim/qtm350-quiz01.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/miracleephraim/qtm350-quiz01.git'
+# and have 3 and 1 different commits each, respectively.
+#
+# All conflicts fixed but you are still merging.
+error: failed to push some refs to 'https://github.com/miracleephraim/qtm350-quiz01.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$ git pull
+Auto-merging .gitignore
+CONFLICT (add/add): Merge conflict in .gitignore
+Automatic merge failed; fix conflicts and then commit the result.      
+
+mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main|MERGING)
+$ git push
+To https://github.com/miracleephraim/qtm350-quiz01.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/miracleephraim/qtm350-quiz01.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.mirac@DESKTOP-TAQ1IV3 MINGW64 ~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$ git merge feature-updatemirac@DESKTOP-TAQ1IV3 MINGW64
+~/Documents/GitHub/qtm350/qtm350-quiz01 (main)
+$
+git merge feature-update#
+:wqa
+q
+Q
+
+.git/COMMIT_EDITMSG[+] [unix] (15:29 23/09/2024)               48,1 Bot
+-- INSERT --
