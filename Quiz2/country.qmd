@@ -42,7 +42,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 plt.plot(gapminder_df["year"], gapminder_df["gdp_per_capita"], label="GDP per Capita")
-plt.plot(gapminder_df["year"], gapminder_df["population"], label="Population")
+plt.plot(gapminder_df["year"], gapminder_df["population_millions"], label="Population")
 plt.plot(gapminder_df["year"], gapminder_df["life_expectancy"], label="Life Expectancy")
 
 plt.legend()

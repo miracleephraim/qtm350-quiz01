@@ -1,7 +1,11 @@
 ---
-title: "Quiz2"
+title: "QTM350 - Quiz 2"
 ---
 
-This is a Quarto website.
+This website will be using data from Gapminder, a dataset from 142 countries from 1952 to 2007. It includes information on GDP, life expectancy, population, and additional geographical information for each nation. 
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+See additional pages here:
+[Life Expectancy and GDP per Capita](lifegdp.qmd)
+[Life Expectancy and Population](life-population.qmd)
+[Country Analysis](country.qmd)
+
